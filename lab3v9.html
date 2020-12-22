@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> lab3v9 </title>
+		<script type="text/javascript">
+			var choice = '+';
+
+			function func(){
+				choice = document.getElementById("choice").value;
+			}
+
+			function func1(){
+				var result;
+				var num1 = Number(document.getElementById("num1").value);
+    			var num2 = Number(document.getElementById("num2").value);
+				
+				switch (choice){
+					case '+':
+						result = num1 + num2;
+						break;
+					case '-':
+						result = num1 - num2;
+						break;
+					case '/':
+						result = num1 / num2;
+						break;
+					case '*':
+						result = num1 * num2;
+				}
+
+				document.getElementById("result").innerHTML = result;
+			}
+			
+
+		</script>
+	</head>
+	<body>
+		
+			<input id = "num1">
+			<select id = "choice" onchange = "func()">
+				<option value = "+"> + </option>
+				<option value = "-"> - </option>
+				<option value = "*"> * </option>
+				<option value = "/"> / </option>
+			</select>
+			<input id = "num2">
+			<button onclick = "func1()"> = </button>
+			<span id = "result"> </span>
+	</body>
+</html>
